@@ -2,16 +2,18 @@
 
 FROM python:3.14
 
-# Add ingredients
+# Cooker
 
 WORKDIR /app
 
+# Ingredians
+
 COPY . .
-# mix / process the items
 
 RUN pip install -r requirements.txt
 
 EXPOSE 8000
-# Gas on
+
+# Gas On
 
 CMD ["python","main.py"]
